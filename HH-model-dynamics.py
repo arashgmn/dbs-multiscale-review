@@ -63,6 +63,8 @@ def plot_nicely(monitor, save_name, for_paper=False):
     ax = axd['A']
     ax.plot(monitor.t/ms, (monitor.v[0])/mV, color='k', linewidth=lws[1])
     ax.set_ylabel('V [mV]') 
+    if for_paper:
+        ax.set_ylabel(r'$V - V_{rest}$ [mV]')
 
     ax = axd['B'] 
     ax.set_ylabel('gating variables') 
